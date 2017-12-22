@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery 02 - Basic</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>JQuery Day 2 | Basic 1</h2>
+<p>Create a Javascript program that will print the name of the related Christmas assets once they are clicked e.g. If the Christmas bell is clicked, write a message "You clicked on the Christmas bell".</p>
+
+<img src="bell.png" width="200px" alt="Christmas Bells">
+<button onclick="document.getElementById('bell').innerHTML = bell.identify()">Click me</button>
+<p id='bell'></p>
+
+<img src="box.png" width="200px" alt="Wrapped christmas present">
+<button onclick="document.getElementById('two').innerHTML = box.identify()">Click me</button>
+<p id='two'></p>
+
+<img src="santa.png" width="200px" alt="Santa Claus">
+<button onclick="document.getElementById('three').innerHTML = santa.identify()">Click me</button>
+<p id='three'></p>
+
+<script>
+	var identify = function() {
+  		return "You clicked on the  " + this.name + " !";
+  	};
+
+  	var bell = {
+	 name: "Christmas Bells",
+	 identify: identify		
+   	};
+
+   	var box = {
+	 name: "Wrapped Christmas Present",	
+	 identify: identify	
+   	};
+
+   	var santa = {
+	 name: "Santa Claus",	
+	 identify: identify	
+   	};
+	
+</script>
+	
+	<h2>JQuery Day 2 | Basic 2</h2>
+	<p>Create a Javascript program that will make Santa Clauses disappear on a click from the following 3x3 matrix. Only the clicked Santa Claus should disappear:</p>
+
+<script>
+
+	$("img:last-of-type").click(function() {
+		$(this).remove();
+	});
+</script>
+
+
+
+</body>
+</html>
